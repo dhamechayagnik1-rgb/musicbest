@@ -1,0 +1,37 @@
+.other {
+    
+    height: 10%;
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    gap: 5px;
+}
+
+.other1 {
+
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.otherlogo {
+
+    height: 70%;
+    width: 15%;
+}
+.otherlogo i{
+    font-size: 40px;
+    color: rgb(83, 75, 75);
+}
+
+.othername {
+    font-size: 40px;
+    height: 70%;
+    color: rgb(83, 75, 75);
+    width: 70%;
+
+}

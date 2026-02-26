@@ -1,0 +1,145 @@
+
+#eventboxmain{
+    
+    height: 46vh;
+    display: grid;
+    grid-template-columns: repeat(6, 0.1fr);
+    row-gap: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+
+
+}
+
+
+.upcomingevnt {
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eventbox {
+    box-sizing: border-box;
+    height: 45vh;
+    width: 1240px;
+    /* 👈 bas itna rakho */
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    gap: 40px;
+    padding-left: 10px;
+}
+
+.aabox {
+    min-width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.aabox img {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: filter 0.5s ease;
+        filter: brightness(70%);
+
+
+}
+
+.aabox:hover img {
+    filter: brightness(0.9);
+
+}
+
+.boxdetails {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    z-index: 10;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.aabutton {
+    height: 40px;
+    width: 150px;
+    background-color: rgba(23, 26, 25, 0.948);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 5px;
+    transition: background-color 0.5s ease;
+}
+.aabutton i{
+    color: rgb(55, 214, 105);
+}
+
+.aabutton:hover i{
+    color: rgb(255, 255, 255);
+}
+.aabutton:hover {
+    
+    cursor: pointer;
+    background-color: rgba(21, 212, 142, 0.948);
+}
+
+.aabutton p {
+    color: rgb(166, 165, 165);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.aabutton:hover p{
+    color: white;
+}
+
+.aadetials {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: end;
+    gap: 5px;
+}
+
+
+.aadetials h1,
+.aadetials h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+}
+.aadetials h2{
+    font-size: 18px;
+}
+
+.aadetials h1 {
+    transition: color 0.5s ease;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.aadetials h1:hover {
+    cursor: pointer;
+    color: rgba(21, 212, 142, 0.948);
+}
+
+.aadetials h4,
+.aadetials h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: rgb(183, 188, 190);
+    margin: 0;
+}

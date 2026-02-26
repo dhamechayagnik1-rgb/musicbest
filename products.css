@@ -1,0 +1,149 @@
+.productbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    overflow-x: auto;
+    gap: 20px;
+    padding-left: 10px;
+    height: 45vh;
+    width: 1230px;  
+
+}
+
+.prmainbox {
+    width: 210px;
+    height: 250px;
+    position: relative;
+    margin-right: 10px;
+    background-color: rgba(33, 34, 33, 0.849);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+
+}
+
+.prbox {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.prbox img {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    transition: filter 0.2s ease;
+    z-index: 1;
+}
+
+.prbox:hover img {
+    filter: blur(3px) brightness(0.7);
+
+}
+
+.prbox:hover img+.prrun {
+    z-index: 2;
+    opacity: 1;
+
+}
+
+.prrun {
+
+    margin-bottom: 20px;
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+
+.proverplay {
+
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(30, 24, 24);
+    transition: z-index 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proverplay i {
+
+    color: white;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.proverplay i:hover {
+    cursor: pointer;
+    color: rgba(44, 174, 94, 0.612);
+}
+
+
+
+
+.prsongname {
+    width: 180px;
+    height: 30px;
+    display: flex;
+    margin-left: 23px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.prsongname h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgb(222, 216, 216);
+    font-size: 15px;
+    transition: color 0.5s ease;
+}
+
+.prsongname h3:hover {
+    cursor: pointer;
+    color: rgb(37, 240, 54);
+}
+
+.prartist h5 {
+    font-size: 18px;
+    color: rgba(191, 181, 181, 0.595);
+    transition: color 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.prartist h5:hover {
+    cursor: pointer;
+    color: rgb(37, 240, 54);
+}
+
+.prartist {
+    margin-left: 23px;
+    margin-top: 5px;
+    width: 180px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}

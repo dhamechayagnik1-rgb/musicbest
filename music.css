@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #14151c;
+    display: flex;
+    border: 5px solid blue;
+    height: 100%;
+    
+}
+
+aside {
+    width: 18%;
+    border: 1px solid rgb(83, 75, 75);
+    background-color: #14151c;
+
+}
+
+.logo {
+
+    height: 10%;
+    border-bottom: 1px solid rgb(83, 75, 75);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10px;
+
+
+}
+
+#logoimg {
+    width: 20%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoimg i {
+    font-size: 30px;
+    color: rgb(0, 255, 132);
+}
+
+#logoname {
+    width: 60%;
+    height: 60%;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.nav {
+    border-bottom: 1px solid rgb(83, 75, 75);
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+#navlogo {
+    height: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    
+    
+}
+
+#navlogo:hover i {
+   color: rgb(18, 215, 110);
+    
+    
+}
+
+#navimg {
+    width: 25px;
+    height: 100%;
+}
+
+#navimg i {
+    transition: color 0.6s ease;
+    color: rgb(168, 166, 166);
+    font-size: 15px;
+}
+
+#navname {
+    width: 70%;
+    height: 100%;
+    font-size: 17px;
+    color: rgb(168, 164, 164);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.mainnav {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid rgb(83, 75, 75);
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbox {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#navbox h3 {
+    color: rgb(143, 143, 143);
+    transition: color 0.5s ease;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbox h3:hover {
+    color: rgb(90, 177, 94);
+    font-family: 'Poppins', sans-serif;
+}
+
+#searchbox {
+    width: 30%;
+    height: 100%;
+}
+
+#notibox {
+    width: 10%;
+    height: 100%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#notibox i {
+    color: rgb(177, 177, 177);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#notibox i:hover {
+    color: rgb(90, 177, 94);
+
+}
+
+#signinbox {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: rgb(177, 177, 177);
+    font-size: 16px;
+    font-style: bold;
+    cursor: pointer;
+}
+
+#signinbox i {
+    font-size: 17px;
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+}
+
+#signinbox i:hover {
+    color: rgb(90, 177, 94);
+
+}
+
+#signinbox:hover {
+    color: rgb(90, 177, 94);
+
+}
+
+.home {
+    height: 89.6vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+
+
+.songbox {
+    height: 85%;
+    border: 1px solid rgb(83, 75, 75);
+}
+
+
+
+
+
+
+

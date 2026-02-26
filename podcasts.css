@@ -1,0 +1,164 @@
+.podcastbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 45vh;
+    width: 1230px;  
+    overflow-x: auto;
+    gap: 40px;
+    padding-left: 10px;
+    
+
+}
+
+.ccmainbox {
+    min-width: 400px;
+    height: 300px;
+
+
+
+}
+
+.ccbox {
+    width: 400px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.ccbox img {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    transition: filter 0.2s ease;
+    z-index: 1;
+}
+
+.ccbox:hover img {
+    filter: blur(3px) brightness(0.7);
+
+}
+
+.ccbox:hover img+.ccrun {
+    z-index: 2;
+    opacity: 1;
+
+}
+
+.ccrun {
+
+
+    position: absolute;
+    cursor: pointer;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+
+.ccoverplay {
+
+    width: 70px;
+    height: 70px;
+    transition: z-index 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ccoverplay i {
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    transition: color 0.2s ease;
+}
+
+.ccoverplay i:hover {
+    cursor: pointer;
+    color: rgba(44, 174, 94, 0.612);
+}
+
+.ccqua {
+    position: absolute;
+    cursor: pointer;
+    width: 400px;
+    padding-left: 60px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    z-index: 2;
+
+}
+
+.cclive {
+    background-color: rgb(226, 90, 90);
+    height: 25px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cclive p {
+    color: aliceblue;
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+
+.ccVIEWERS {
+    background-color: rgba(48, 43, 43, 0.642);
+    height: 25px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.ccVIEWERS p {
+    color: aliceblue;
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+
+
+.ccsongname {
+    width: 230px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.ccsongname h3 {
+    letter-spacing: 2px;
+    color: rgb(222, 216, 216);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: color 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.ccsongname h3:hover {
+    cursor: pointer;
+    color: rgb(37, 240, 54);
+}

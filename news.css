@@ -1,0 +1,207 @@
+.Newsbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 55vh;
+    width: 1230px;
+
+}
+
+.ddmainbox {
+    width: 390px;
+    height: 390px;
+    border-radius: 20px;
+    background-color: rgba(26, 24, 24, 0.897);
+    ;
+    margin-right: 10px;
+    overflow: hidden;
+
+}
+
+.ddbox {
+    width: 400px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.ddbox img {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    transition: filter 0.2s ease;
+    z-index: 1;
+
+}
+
+.ddbox:hover img {
+    filter: blur(3px) brightness(0.7);
+}
+
+.ddbox:hover img {
+    opacity: 1;
+
+}
+
+.ddqua {
+    position: absolute;
+    width: 400px;
+    padding-left: 60px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    z-index: 1;
+
+
+
+}
+
+.ddlive {
+    background-color: rgb(44, 36, 36);
+    height: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    gap: 10px;
+    transition: background-color 0.5s ease;
+
+}
+
+.ddlive:hover {
+    cursor: pointer;
+    background-color: rgba(81, 222, 93, 0.827);
+}
+
+.ddlive p {
+    color: aliceblue;
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.ddlive:hover i {
+    color: white;
+}
+
+.ddlive i {
+    font-size: 20px;
+    color: rgb(7, 212, 117);
+}
+
+
+.ddVIEWERS {
+    background-color: rgba(74, 56, 239, 0.952);
+    height: 25px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    margin-bottom: 20px;
+}
+
+.ddVIEWERS:hover {
+    cursor: pointer;
+    background-color: rgba(81, 222, 93, 0.827);
+}
+
+.ddVIEWERS p {
+    color: aliceblue;
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+
+
+.ddsongname {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ddsongname h3 {
+    width: 390px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    height: 80px;
+    letter-spacing: 2px;
+    color: rgb(222, 216, 216);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: color 0.5s ease;
+}
+
+.ddsongname h3:hover {
+    cursor: pointer;
+    color: rgb(37, 240, 54);
+}
+
+
+.ddtime {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hourtime {
+    height: 20px;
+    width: 150px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourtime i {
+    margin: 0;
+    color: rgb(125, 124, 124);
+}
+
+.hourtime p {
+    margin: 0;
+    color: rgb(125, 124, 124);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.ddmessage {
+    height: 20px;
+    width: 150px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ddmessage i {
+    margin: 0;
+    color: rgb(125, 124, 124);
+}
+
+.ddmessage p {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    color: rgb(125, 124, 124);
+}

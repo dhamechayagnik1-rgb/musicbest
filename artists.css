@@ -1,0 +1,48 @@
+
+.artistbox {
+    height: 40vh;
+    width: 1230px;  
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content: start;
+    padding-left: 10px;
+}
+.bbbox {
+    min-width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.bbbox img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: filter 0.5s ease;
+}
+.bbbox:hover img {
+    filter: brightness(0.9);
+}
+
+.bbboxdetails {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.bbboxdetails h3 {
+    font-family: 'Poppins', sans-serif;
+  font-weight: 300; 
+    color: rgb(250, 250, 250);
+    margin: 0;
+    transition: color 0.5s ease;
+}
+
+.bbbox:hover h3 {
+    color: rgb(24, 235, 109);
+}

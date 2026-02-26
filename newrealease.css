@@ -1,0 +1,157 @@
+#songbox {
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(6, 0.1fr);
+    row-gap: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.mainbox {
+    width: 190px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.box {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.box img {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    z-index: 1;
+}
+
+.box:hover img {
+    filter: blur(3px) brightness(0.7);
+    transform: scale(1.2);
+}
+
+.box:hover img+.run {
+    z-index: 2;
+    opacity: 1;
+
+}
+
+.run {
+
+    margin-bottom: 20px;
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+
+.overplay {
+
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: rgb(30, 24, 24);
+    transition: z-index 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overplay i {
+
+    color: white;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.overplay i:hover {
+    cursor: pointer;
+    color: rgba(44, 174, 94, 0.612);
+}
+
+
+.qua {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    gap: 5px;
+}
+
+.qi {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qi i {
+    color: white;
+}
+
+.qi p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.songname {
+    width: 180px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.songname h3 {
+    letter-spacing: 2px;
+    color: rgb(222, 216, 216);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: color 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.songname h3:hover {
+    cursor: pointer;
+    color: rgb(37, 240, 54);
+}
+
+.artist h5 {
+    color: rgba(191, 181, 181, 0.595);
+    transition: color 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.artist h5:hover {
+    cursor: pointer;
+    color: rgb(37, 240, 54);
+}
+
+.artist {
+    width: 180px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+}

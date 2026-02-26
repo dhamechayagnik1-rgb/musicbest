@@ -1,0 +1,134 @@
+
+
+/*    main     */
+
+
+.home::-webkit-scrollbar {
+  width: 10px;   /* vertical */
+  height: 6px;  /* horizontal */
+}
+
+/* Track */
+.home::-webkit-scrollbar-track {
+  background: #1a1d24;   /* dark track */
+  border-radius: 20px;
+}
+
+/* Thumb (pill shape) */
+.home::-webkit-scrollbar-thumb {
+  background: #373636;   /* light thumb */
+  border-radius: 50px;
+}
+
+/* Hover effect */
+.home::-webkit-scrollbar-thumb:hover {
+  background: rgb(30, 228, 100);
+}
+
+
+
+
+
+
+/* Scrollbar size */
+.eventbox::-webkit-scrollbar {
+  width: 6px;   /* vertical */
+  height: 6px;  /* horizontal */
+}
+
+/* Track */
+.eventbox::-webkit-scrollbar-track {
+  background: #1a1d24;   /* dark track */
+  border-radius: 20px;
+}
+
+/* Thumb (pill shape) */
+.eventbox::-webkit-scrollbar-thumb {
+  background: #dcdcdc;   /* light thumb */
+  border-radius: 50px;
+}
+
+/* Hover effect */
+.eventbox::-webkit-scrollbar-thumb:hover {
+  background: rgb(30, 228, 100);
+}
+
+
+
+/*    artist     */
+
+
+.artistbox::-webkit-scrollbar {
+  width: 6px;   /* vertical */
+  height: 6px;  /* horizontal */
+}
+
+/* Track */
+.artistbox::-webkit-scrollbar-track {
+  background: #1a1d24;   /* dark track */
+  border-radius: 20px;
+}
+
+/* Thumb (pill shape) */
+.artistbox::-webkit-scrollbar-thumb {
+  background: #dcdcdc;   /* light thumb */
+  border-radius: 50px;
+}
+
+/* Hover effect */
+.artistbox::-webkit-scrollbar-thumb:hover {
+  background: rgb(30, 228, 100);
+}
+
+
+
+/*    podcast     */
+
+
+.podcastbox::-webkit-scrollbar {
+  width: 6px;   /* vertical */
+  height: 6px;  /* horizontal */
+}
+
+/* Track */
+.podcastbox::-webkit-scrollbar-track {
+  background: #1a1d24;   /* dark track */
+  border-radius: 20px;
+}
+
+/* Thumb (pill shape) */
+.podcastbox::-webkit-scrollbar-thumb {
+  background: #dcdcdc;   /* light thumb */
+  border-radius: 50px;
+}
+
+/* Hover effect */
+.podcastbox::-webkit-scrollbar-thumb:hover {
+  background: rgb(30, 228, 100);
+}
+
+
+/*    products     */
+
+
+.productbox::-webkit-scrollbar {
+  width: 6px;   /* vertical */
+  height: 6px;  /* horizontal */
+}
+
+/* Track */
+.productbox::-webkit-scrollbar-track {
+  background: #1a1d24;   /* dark track */
+  border-radius: 20px;
+}
+
+/* Thumb (pill shape) */
+.productbox::-webkit-scrollbar-thumb {
+  background: #dcdcdc;   /* light thumb */
+  border-radius: 50px;
+}
+
+/* Hover effect */
+.productbox::-webkit-scrollbar-thumb:hover {
+  background: rgb(30, 228, 100);
+}
