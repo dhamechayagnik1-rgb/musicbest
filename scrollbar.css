@@ -6,6 +6,7 @@
 .home::-webkit-scrollbar {
   width: 10px;   /* vertical */
   height: 6px;  /* horizontal */
+  display: none;
 }
 
 /* Track */
@@ -34,6 +35,7 @@
 .eventbox::-webkit-scrollbar {
   width: 6px;   /* vertical */
   height: 6px;  /* horizontal */
+  display: none;
 }
 
 /* Track */
@@ -61,6 +63,7 @@
 .artistbox::-webkit-scrollbar {
   width: 6px;   /* vertical */
   height: 6px;  /* horizontal */
+  display: none;
 }
 
 /* Track */
@@ -88,6 +91,7 @@
 .podcastbox::-webkit-scrollbar {
   width: 6px;   /* vertical */
   height: 6px;  /* horizontal */
+  display: none;
 }
 
 /* Track */
@@ -114,6 +118,7 @@
 .productbox::-webkit-scrollbar {
   width: 6px;   /* vertical */
   height: 6px;  /* horizontal */
+  display: none;
 }
 
 /* Track */
