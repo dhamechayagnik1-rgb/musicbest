@@ -1,0 +1,571 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+   
+    height: 100%;
+}
+
+/* ------------------------------------Navigation Bar-----------------------------------------------------*/
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+header {
+    display: none; 
+}
+
+
+}
+
+
+
+
+
+/* ----------------------------------Home-------------------------------------------------------- */
+@media (max-width: 768px) {
+.mainleft{
+     
+     height: 80vh;
+     border: 5px solid rgb(211, 45, 45);
+}
+.home { 
+    display: flex;
+    height: 100vh;
+    background-color: rgb(21, 21, 43);;
+}
+
+.mainimg {
+    display: none;
+}
+
+.mainimg img {
+    
+    display: none;
+   
+}
+
+
+
+#titlesb {
+    margin-top: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 5px solid black;
+}
+
+/* Headings */
+
+.title1 {
+    
+    margin-left: 0;
+        border: 5px solid black;
+
+}
+
+.title1 h1 {
+    letter-spacing: 5px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.927);
+    font-family: sans-serif;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Paragraphe */
+
+.title2 {
+    
+    margin-left: 0;
+        border: 1px solid black;
+
+}
+
+.title2 p {
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.927);
+    animation: fadeInUp 1s ease-in-out forwards;
+
+}
+
+/* Button Listen Now and Add To Queue */
+
+.button1 {
+    margin-top: 20px;
+  
+    margin-left: 0;
+    height: 50px;
+    display: flex;
+    gap: 50px;
+    animation: fadeInUp 1s ease-in-out forwards;
+    border: 1px solid black;
+
+}
+
+.button10 {
+    margin-left: 10px;
+    background-color: rgba(239, 92, 148, 0.94);
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.button11 {
+    border-radius: 20px;
+    background-color: rgba(233, 67, 131, 0.396);
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+
+}
+
+.button10:hover {
+    border: 2px solid rgba(255, 255, 255, 0.949);
+    filter: brightness(105%);
+    transform: scale(1.1);
+}
+
+.button11:hover {
+    border: 2px solid rgba(255, 255, 255, 0.949);
+    filter: brightness(105%);
+    transform: scale(1.1);
+}
+
+.button1 a {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+
+
+/* Slider Images */
+
+
+#musicv {
+   
+    padding-left: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    animation: fadeInLeft 1s ease-in-out forwards;
+    border: 1px solid black;
+}
+
+
+
+.imgborder p {
+ display: none;
+   
+}
+
+.imgborder img {
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(110%) contrast(110%);
+}
+
+#musicv img:hover {
+
+    transform: scale(1.1);
+
+}
+
+#musicv img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#musicv img:nth-child(3) {
+    width: 150px;
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(110%) contrast(110%);
+}
+
+#musicv img:nth-child(4) {
+   width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(110%) contrast(110%);
+}
+
+/* Animation For Music Websie */
+
+/* Animation Hading and Paragraph and Button */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Animation For Images */
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translatex(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+}
+
+
+
+
+
+/*------------------------------------------About--------------------------------------------*/
+
+/* image 2*/
+@media (max-width: 768px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+.about {
+    height: 100vh;
+    background-color: rgb(37, 37, 92);
+    display: flex;
+}
+
+
+#image2 {
+    height: 99.8vh;
+    width: 100vh;
+    display: flex;
+    align-items: end;
+}
+
+.round1 {
+    width: 550px;
+    height: 550px;
+    background-color: rgba(255, 22, 119, 0.138);
+    border-radius: 50%;
+    position: absolute;
+    left: 8%;
+    opacity: 0.5;
+    background: linear-gradient(to bottom right,
+            rgba(255, 22, 119, 0),
+            rgba(255, 22, 119, 0.248));
+}
+
+.round2 {
+    width: 550px;
+    height: 600px;
+    background-color: rgba(255, 22, 119, 0.248);
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    opacity: 0.5;
+    background: linear-gradient(to bottom right,
+            rgba(255, 22, 119, 0.248),
+            rgba(255, 22, 119, 0));
+}
+
+.shape {
+    position: absolute;
+    left: 40px;
+    margin-bottom: 40px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 22, 119, 0.103);
+}
+
+#image2 img {
+    z-index: 10;
+    height: 650px;
+
+
+}
+
+
+/* maincontent*/
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vh;
+    gap: 20px;
+
+}
+
+
+.event {
+
+    height: 40px;
+    width: 500px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.event h3 {
+
+    color: white;
+    letter-spacing: 6px;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.eventtitle {
+    height: 150px;
+    width: 500px;
+}
+
+.eventtitle h1 {
+    color: white;
+    letter-spacing: 6px;
+    font-size: 38px;
+    font-weight: 10;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.details1 {
+    height: 30vh;
+    width: 500px;
+}
+
+.details1 p {
+    line-height: 1.8;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 10;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ticketbutton {
+    height: 80px;
+    width: 500px;
+    display: flex;
+}
+
+.ticketbutton div {
+    margin-left: 10px;
+    border: 2px solid rgb(255, 107, 181);
+    height: 50px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+
+}
+
+.ticketbutton div a {
+
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+
+}
+
+}
+
+
+/*--------------------------------singers-------------------------------*/
+
+.singers {
+
+    height: 100vh;
+    background-color: rgb(75, 36, 103);
+    display: flex;
+    flex-direction: column;
+    background: repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 2px,
+            transparent 2px,
+            transparent 20px);
+    background-color: rgb(75, 36, 103);
+    align-items: center;
+
+}
+
+
+/* pertitle */
+
+#pertitle {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#performer {
+    display: flex;
+    flex-direction: column;
+}
+
+#performer h1 {
+    color: white;
+    font-size: 35px;
+    height: 70px;
+    width: 70%
+    
+    
+}
+
+#performer h2 {
+    color: white;
+    height: 10px;
+    letter-spacing: 2px;
+    font-size: 20px;
+
+}
+
+
+
+.rlbuton {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.rlbuton div{
+ 
+    transition: background-color 0.2s ease;
+}
+
+.rlbuton div:hover{
+    background-color: rgba(22, 22, 50, 0.744);
+}
+
+.rlbuton div img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.rlbuton div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(237, 88, 170, 0.434);
+}
+
+
+
+
+
+/*  singer  */
+
+
+.singer{
+     width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.singer1{
+    width: 288px;
+    height: 512px;
+    border-radius: 140px;
+    background-color: rgba(19, 19, 55, 0.544);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.singer1 img{
+    margin-top: 10px;
+    height: 288px;
+    width: 256px;
+    border-radius: 45%;
+}
+
+.kate{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.kate h1{
+    color: white;
+    font-size: 30px;
+}
+.rock{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.rock h4{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 10;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.social{
+    height: 2.2rem;
+    width: 13rem;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.social div{
+    height: 35px;
+    width: 35px;
+    border-radius: 40%;
+    background-color: rgba(80, 55, 106, 0.588);
+    transition: background-color 0.2s ease;
+
+}
+
+.social div:hover{
+    cursor: pointer;
+    background-color: rgba(142, 31, 88, 0.868);
+    
+}

@@ -1,23 +1,25 @@
-
-
 /*    main     */
 
 
 .home::-webkit-scrollbar {
-  width: 10px;   /* vertical */
-  height: 6px;  /* horizontal */
+  width: 10px;
+  /* vertical */
+  height: 6px;
+  /* horizontal */
   display: none;
 }
 
 /* Track */
 .home::-webkit-scrollbar-track {
-  background: #1a1d24;   /* dark track */
+  background: #1a1d24;
+  /* dark track */
   border-radius: 20px;
 }
 
 /* Thumb (pill shape) */
 .home::-webkit-scrollbar-thumb {
-  background: #373636;   /* light thumb */
+  background: #373636;
+  /* light thumb */
   border-radius: 50px;
 }
 
@@ -33,20 +35,24 @@
 
 /* Scrollbar size */
 .eventbox::-webkit-scrollbar {
-  width: 6px;   /* vertical */
-  height: 6px;  /* horizontal */
+  width: 6px;
+  /* vertical */
+  height: 6px;
+  /* horizontal */
   display: none;
 }
 
 /* Track */
 .eventbox::-webkit-scrollbar-track {
-  background: #1a1d24;   /* dark track */
+  background: #1a1d24;
+  /* dark track */
   border-radius: 20px;
 }
 
 /* Thumb (pill shape) */
 .eventbox::-webkit-scrollbar-thumb {
-  background: #dcdcdc;   /* light thumb */
+  background: #dcdcdc;
+  /* light thumb */
   border-radius: 50px;
 }
 
@@ -61,20 +67,24 @@
 
 
 .artistbox::-webkit-scrollbar {
-  width: 6px;   /* vertical */
-  height: 6px;  /* horizontal */
+  width: 6px;
+  /* vertical */
+  height: 6px;
+  /* horizontal */
   display: none;
 }
 
 /* Track */
 .artistbox::-webkit-scrollbar-track {
-  background: #1a1d24;   /* dark track */
+  background: #1a1d24;
+  /* dark track */
   border-radius: 20px;
 }
 
 /* Thumb (pill shape) */
 .artistbox::-webkit-scrollbar-thumb {
-  background: #dcdcdc;   /* light thumb */
+  background: #dcdcdc;
+  /* light thumb */
   border-radius: 50px;
 }
 
@@ -89,20 +99,24 @@
 
 
 .podcastbox::-webkit-scrollbar {
-  width: 6px;   /* vertical */
-  height: 6px;  /* horizontal */
+  width: 6px;
+  /* vertical */
+  height: 6px;
+  /* horizontal */
   display: none;
 }
 
 /* Track */
 .podcastbox::-webkit-scrollbar-track {
-  background: #1a1d24;   /* dark track */
+  background: #1a1d24;
+  /* dark track */
   border-radius: 20px;
 }
 
 /* Thumb (pill shape) */
 .podcastbox::-webkit-scrollbar-thumb {
-  background: #dcdcdc;   /* light thumb */
+  background: #dcdcdc;
+  /* light thumb */
   border-radius: 50px;
 }
 
@@ -116,20 +130,24 @@
 
 
 .productbox::-webkit-scrollbar {
-  width: 6px;   /* vertical */
-  height: 6px;  /* horizontal */
+  width: 6px;
+  /* vertical */
+  height: 6px;
+  /* horizontal */
   display: none;
 }
 
 /* Track */
 .productbox::-webkit-scrollbar-track {
-  background: #1a1d24;   /* dark track */
+  background: #1a1d24;
+  /* dark track */
   border-radius: 20px;
 }
 
 /* Thumb (pill shape) */
 .productbox::-webkit-scrollbar-thumb {
-  background: #dcdcdc;   /* light thumb */
+  background: #dcdcdc;
+  /* light thumb */
   border-radius: 50px;
 }
 
