@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        button { padding: 10px 15px; background: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Upload Document</h2>
+    <!-- enctype="multipart/form-data" is required for file uploads -->
+    <form action="/upload-endpoint" method="POST" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            <label for="pdf-file">Select PDF File:</label>
+            <!-- accept=".pdf" restricts selection to PDF documents -->
+            <input type="file" id="pdf-file" name="pdf_document" accept=".pdf" required>
+        </div>
+
+        <button type="submit">Upload PDF</button>
+    </form>
+
+</body>
+</html>
