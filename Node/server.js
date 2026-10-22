@@ -2,7 +2,13 @@
 import express from "express";
 import path from "node:path";
 import fs from "node:fs/promises";
-import { PDFParse } from "pdf-parse";
+import { DOMMatrix, ImageData, Path2D } from "@napi-rs/canvas";
+
+globalThis.DOMMatrix ??= DOMMatrix;
+globalThis.ImageData ??= ImageData;
+globalThis.Path2D ??= Path2D;
+
+const { PDFParse } = await import("pdf-parse");
 
 import ProductController from "./src/controllers/productController.js";
 import upload from "./src/multer.js";
