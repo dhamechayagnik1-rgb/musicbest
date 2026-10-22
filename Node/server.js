@@ -144,8 +144,10 @@ server.use((err, req, res, next) => {
   });
 });
 
-if (process.env.VERCEL !== "1") {
+if (!process.env.VERCEL) {
   server.listen(3400, () => {
     console.log("Server running at http://localhost:3400");
   });
 }
+
+export default server;
