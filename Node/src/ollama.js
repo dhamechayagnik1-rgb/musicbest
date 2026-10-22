@@ -1,38 +1,45 @@
 
 import "dotenv/config";
 
-export async function askOllama(content, question) {
-  const response = await fetch(
-    "https://ollama.com/api/chat",
-    {
-      method: "POST",
+export async function askOllama(content = "", question = "") {
+  const pdfContent = content?.trim()
+    ? `PDF ka content:\n\n${content.trim()}`
+    : "Koi PDF upload nahi ki gayi.";
 
-      headers: {
-        Authorization: `Bearer ${process.env.OLLAMA_API_KEY}`,
-        "Content-Type": "application/json"
-      },
+  const userQuestion = question?.trim()
+    ? `Mera sawaal:\n${question.trim()}`
+    : "User ne koi sawaal nahi poochha.";
 
-      body: JSON.stringify({
-        model: "gemma4:31b",
+  const response = await fetch("https://ollama.com/api/chat", {
+    method: "POST",
 
-        messages: [
-          {
-            role: "system",
-            content: `Tum ek PDF research assistant ho.
+    headers: {
+      Authorization: `Bearer ${process.env.OLLAMA_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify({
+      model: "gemma4:31b",
+
+      messages: [
+        {
+          role: "system",
+          content: `Tum ek PDF research assistant ho.
 PDF ke content ke aadhar par simple Hindi mein jawab do.
 Agar jawab PDF mein nahi hai, to saaf batao.
+Agar PDF nahi di gayi hai, to user ke sawaal ka jawab apni available knowledge ke aadhar par do.
 Apni taraf se facts mat ghadho.`
-          },
-          {
-            role: "user",
-            content: `PDF ka content:\n\n${content}\n\nMera sawaal: ${question}`
-          }
-        ],
+        },
 
-        stream: false
-      })
-    }
-  );
+        {
+          role: "user",
+          content: `${pdfContent}\n\n${userQuestion}`
+        }
+      ],
+
+      stream: false
+    })
+  });
 
   const data = await response.json();
 

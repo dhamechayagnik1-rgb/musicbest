@@ -1,7 +1,7 @@
 
 import express from "express";
 import path from "node:path";
-import fs from "node:fs";
+import fs from "node:fs/promises";
 import { PDFParse } from "pdf-parse";
 
 import ProductController from "./src/controllers/productController.js";
@@ -12,58 +12,91 @@ const server = express();
 
 const productController = new ProductController();
 
-// Static files
+server.use(express.json());
+server.use(express.urlencoded({ extended: true }));
+
 server.use(
   express.static(path.join(process.cwd(), "src", "views"))
 );
 
-// EJS setup
 server.set("view engine", "ejs");
 server.set(
   "views",
   path.join(process.cwd(), "src", "views")
 );
 
-// Home route
 server.get("/", productController.getProducts);
 
-// Multiple PDF upload aur AI processing
+// PDF upload aur AI processing
 server.post(
   "/",
   upload.array("myFiles", 5),
   async (req, res) => {
-    if (!req.files || req.files.length === 0) {
-      return res.status(400).json({
-        message: "Kam se kam ek PDF upload karo."
-      });
-    }
-
     const results = [];
+    const uploadedFiles = req.files || [];
+    const question = req.body.question?.trim() || "";
 
     try {
-      for (const uploadedFile of req.files) {
-        const filePath = uploadedFile.path;
+      // PDF upload nahi hui to bhi normal question ka answer do
+      if (uploadedFiles.length === 0) {
+        if (!question) {
+          return res.status(400).json({
+            message: "PDF upload karo ya question likho."
+          });
+        }
+
+        const answer = await askOllama("", question);
+
+        return res.status(200).json({ answer });
+      }
+
+      // Har uploaded PDF ko process karo
+      for (const uploadedFile of uploadedFiles) {
         let parser;
+        let pdfText = "";
 
         try {
-          const buffer = fs.readFileSync(filePath);
+          const buffer = await fs.readFile(uploadedFile.path);
 
           parser = new PDFParse({ data: buffer });
 
-          const result = await parser.getText();
+          try {
+            const result = await parser.getText();
 
-          const question =
-            "ISME KYA LIKHA HAI SAAF SAaf BATAO";
+            // Parser result mila to text use karo
+            pdfText = result?.text?.trim() || "";
+          } catch (parseError) {
+            // Parser fail ho to bhi AI ko question bhejenge
+            console.error(
+              "PDF text extraction error:",
+              parseError.message
+            );
+          }
 
-          // Ollama ko alag file ke function se call karo
-          const answer = await askOllama(
-            result.text,
-            question
+        } catch (fileError) {
+          console.error(
+            "PDF read error:",
+            fileError.message
           );
+        } finally {
+          if (parser) {
+            try {
+              await parser.destroy();
+            } catch (destroyError) {
+              console.error(
+                "Parser cleanup error:",
+                destroyError.message
+              );
+            }
+          }
+        }
 
-          console.log("PDF:", uploadedFile.originalname);
-          console.log("Sawaal:", question);
-          console.log("AI ka jawab:", answer);
+        // Text empty ho tab bhi Ollama call hoga
+        const content = pdfText ||
+          "PDF se text extract nahi ho saka. PDF scanned/image-based ya unreadable ho sakti hai.";
+
+        try {
+          const answer = await askOllama(content, question);
 
           results.push({
             fileName: uploadedFile.originalname,
@@ -71,28 +104,34 @@ server.post(
             answer
           });
         } finally {
-          if (parser) {
-            await parser.destroy();
-          }
+          // Temporary file delete karo
+          await fs.unlink(uploadedFile.path).catch(() => {});
         }
       }
 
       return res.status(200).json({
-        message: "Saari PDFs process ho gayi hain.",
+        message: "PDF processing complete.",
         results
       });
+
     } catch (error) {
-      console.error("PDF processing error:", error);
+      console.error("AI processing error:", error);
+
+      await Promise.all(
+        uploadedFiles.map(file =>
+          fs.unlink(file.path).catch(() => {})
+        )
+      );
 
       return res.status(500).json({
-        message: "PDF process karte waqt error aaya.",
+        message: "AI processing ke dauran error aaya.",
         error: error.message
       });
     }
   }
 );
 
-// Upload aur doosre errors handle karo
+// Error handling
 server.use((err, req, res, next) => {
   console.error(err);
 
